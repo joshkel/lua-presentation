@@ -15,6 +15,22 @@ Reminds me most of a bit more verbose JavaScript - apparently not a coincidence,
 No shortage of languages available...
 Lua's unique because it's _fast_ and _easy to embed_.
 
+## Application scripting
+
+Adobe Photoshop Lightroom; ExtraPuTTY fork of the PuTTY SSH client; Lighty and Nginx web servers; MediaWiki, the engine that powers Wikipedia; MySQL Workbench; Nmap network scanner and Wireshark network sniffer; VLC media player
+
+Could find a couple dozen more; these are just applications that I recognized or have used
+
+Darker note - Flame virus that, in 2012, infected Iran and elsewhere in the Middle East, suspected to be created by U.S. and Israeli intelligence agencies, was partially implemented in Lua.
+
+## Games
+
+World of Warcraft is the best known - a good part of the UI is implemented in Lua, allowing players to create various UI add-ons and customizations
+
+A *lot* of games over the last almost 20 years...
+
+# Lua: the bad parts
+
 ### 1-based indexing
 
 Edsger Dijkstra essay, 1982, argued it's mathematically more elegant.

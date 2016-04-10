@@ -1,0 +1,22 @@
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logos > div {
+    width: 175px;
+    flex-shrink: 0;
+    font-size: smaller;
+}
+
+.logos > div > img {
+    width: 128px;
+    height: 128px;
+    border: none;
+    box-shadow: none;
+}
+
+.credit {
+    color: #777;
+    font-style: italic !important;
+}
