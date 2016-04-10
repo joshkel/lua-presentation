@@ -48,16 +48,16 @@
                 <section data-background="white">
                     <p>Some applications using Lua:</p>
                     <div class="logos">
-                        <div><img src="img/logos/v4_LR_icon-cropped.png"/>Adobe Lightroom</div>
-                        <div><img src="img/logos/PuTTY_icon-2bgpv7l.png"/>ExtraPuTTY</div>
-                        <div><img src="img/logos/Lighttpd_logo.svg.png"/>Lighttpd</div>
-                        <div><img src="img/logos/mediawikiwiki.png"/>MediaWiki</div>
-                        <div><img src="img/logos/MySQL-workbench.png"/>MySQL Workbench</div>
-                        <div><img src="img/logos/nmap-logo-256x256.png"/>Nmap</div>
-                        <div><img src="img/logos/nginx.png"/>Nginx</div>
-                        <div><img src="img/logos/Vimlogo.png"/>Vim</div>
-                        <div><img src="img/logos/cone_altglass.png"/>VLC</div>
-                        <div><img src="img/logos/Wireshark_Icon.png"/>Wireshark</div>
+                        <div><img src="img/logos/v4_LR_icon-cropped.png"/><div class="caption">Adobe Lightroom</div></div>
+                        <div><img src="img/logos/PuTTY_icon-2bgpv7l.png"/><div class="caption">ExtraPuTTY</div></div>
+                        <div><img src="img/logos/Lighttpd_logo.svg.png"/><div class="caption">Lighttpd</div></div>
+                        <div><img src="img/logos/mediawikiwiki.png"/><div class="caption">MediaWiki</div></div>
+                        <div><img src="img/logos/MySQL-workbench.png"/><div class="caption">MySQL Workbench</div></div>
+                        <div><img src="img/logos/nmap-logo-256x256.png"/><div class="caption">Nmap</div></div>
+                        <div><img src="img/logos/nginx.png"/><div class="caption">Nginx</div></div>
+                        <div><img src="img/logos/Vimlogo.png"/><div class="caption">Vim</div></div>
+                        <div><img src="img/logos/cone_altglass.png"/><div class="caption">VLC</div></div>
+                        <div><img src="img/logos/Wireshark_Icon.png"/><div class="caption">Wireshark</div></div>
                     </div>
                 </section>
 
@@ -81,6 +81,7 @@
                         <div><img src="img/logos/Baldur's_Gate_box.png" title="Baldur's Gate"/></div>
                         <div><img src="img/logos/CIVILIZATION-V-FRONT-OF-BOX.png" title="Civilization V"/></div>
                         <div><img src="img/logos/Crysis_Cover.png" title="Crysis"/></div>
+                        <div><img src="img/logos/GarrysMod.png" title="Garry's Mod"/></div>
                         <div><img src="img/logos/Grim_Fandango_artwork.png" title="Grim Fandango"/></div>
                         <div><img src="img/logos/Homeworld_2_box_art.png" title="Homeworld 2"/></div>
                         <div><img src="img/logos/Payday.jpg" title="Payday"/></div>
@@ -88,11 +89,14 @@
                         <div><img src="img/logos/SimCity_4_cover.png" title="SimCity 4"/></div>
                         <div><img src="img/logos/StarWarsBattlefront2_PC.png" title="Star Wars Battlefront 2"/></div>
                         <div><img src="img/logos/supcom1.jpg" title="Supreme Commander"/></div>
+                        <div><img src="img/logos/The_Witcher_EU_box.png" title="The Witcher"/></div>
+                        <div><img src="img/logos/Warhammer_40,000_Dawn_of_War_II.png" title="Warhammer 40,000: Dawn of War II"/></div>
                         <div><img src="img/logos/world-of-warcraft-logo.png" title="World of Warcraft"/></div>
                     </div>
                 </section>
             </div>
         </div>
+        <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
         <script src="bower_components/reveal.js/js/reveal.js"></script>
         <script>
             Reveal.initialize({
@@ -100,7 +104,12 @@
                 progress: true,
                 history: true,
                 transition: 'slide',
-                transitionSpeed: 'fast'
+                transitionSpeed: 'fast',
+                dependencies: [
+                    { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+				]
             });
         </script>
     </body>
