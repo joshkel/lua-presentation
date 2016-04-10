@@ -1,0 +1,20 @@
+{
+  "name": "lua-talk",
+  "authors": [
+    "Josh Kelley <joshkel@gmail.com>"
+  ],
+  "description": "Lua presentation for Knoxville Coding Dojo",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reveal.js": "^3.2.0"
+  }
+}
