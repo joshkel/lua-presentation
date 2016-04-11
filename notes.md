@@ -8,7 +8,7 @@ A little newer than Python (1991), a little over than JavaScript or Java (1995).
 
 "Lua" is Portuguese for "moon."
 
-Reminds me most of a bit more verbose JavaScript - apparently not a coincidence, since JS and Lua took some inspiration from Scheme.
+Reminds me most of a bit more verbose JavaScript - apparently both JS and Lua took some inspiration from Scheme.
 
 # Why should I care?
 
@@ -57,6 +57,18 @@ T-Engine 4 - an example of a more niche engine, this is designed primarily for r
 
 (I don't have nearly enough time to be an expert on all of these.  Some or all of what I just told you could be wrong.)
 
+# How do I learn Lua?
+
+_Programming in Lua_ available on Amazon, and an older edition available for free online.  That's a good resource.
+
+The reference manual is online.  That's a good resource.
+
+Lots of tutorials on the wiki.  Those are good resources.
+
+I only have X minutes, so I'm ignoring all of those.
+
+Instead, we're going to learn Lua in 15 minutes
+
 # Lua: the bad parts
 
 ### 1-based indexing
@@ -76,7 +88,7 @@ Lua 5.3
 
 Lua 5.2
 
-* `goto` (Lua has no `continue` statement) (Yes, goto is evil. Lua's philosophy is "mechanisms instead of policies" - just like providing metatables, so you can implement prototypical or classical or whatever)
+* `goto` (Lua has no `continue` statement) (Yes, goto is considered harmful. Lua's philosophy is "mechanisms instead of policies" - just like providing metatables, so you can implement prototypical or classical or whatever)
 * Finalizers
 
 LuaJIT
