@@ -29,6 +29,24 @@ World of Warcraft is the best known - a good part of the UI is implemented in Lu
 
 A *lot* of games over the last almost 20 years...
 
+## Game engines
+
+All of these have free options
+
+Cocos 2d-x - a very popular multi-language, cross-platform framework, offers Lua as one of its options
+
+Corona SDK - very popular for mobile development
+
+CryEngine - AAA 3-D game engine, now included in Amazon's free Lumberyard game engine
+
+Defold - sponsored by King, the company that makes Candy Crush
+
+LOVE - popular beginner/hobbyist choice
+
+T-Engine 4 - an example of a more niche engine, this is designed primarily for roguelikes
+
+Lumberyard - Amazon's new free engine
+
 # Lua: the bad parts
 
 ### 1-based indexing
