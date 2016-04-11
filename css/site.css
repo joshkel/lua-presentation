@@ -1,3 +1,7 @@
+img.plain {
+    background: transparent !important;
+}
+
 .logos {
     display: flex;
     flex-wrap: wrap;
@@ -7,6 +11,10 @@
     width: 175px;
     flex-shrink: 0;
     font-size: smaller;
+}
+
+.logos.narrow > div {
+    width: 160px;
 }
 
 .logos > div > img {

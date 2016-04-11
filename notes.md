@@ -17,11 +17,17 @@ Lua's unique because it's _fast_ and _easy to embed_.
 
 ## Application scripting
 
-Adobe Photoshop Lightroom; ExtraPuTTY fork of the PuTTY SSH client; Lighty and Nginx web servers; MediaWiki, the engine that powers Wikipedia; MySQL Workbench; Nmap network scanner and Wireshark network sniffer; VLC media player
+Adobe Photoshop Lightroom; ExtraPuTTY fork of the PuTTY SSH client; HAProxy (load balancer used by GitHub, StackOverflow, bunches of other guys); Lighty and Nginx web servers; MediaWiki, the engine that powers Wikipedia; MySQL Workbench; Nmap network scanner and Wireshark network sniffer; Redis (one of the most popular key-value stores and NoSQL databases); VLC media player
 
 Could find a couple dozen more; these are just applications that I recognized or have used
 
-Darker note - Flame virus that, in 2012, infected Iran and elsewhere in the Middle East, suspected to be created by U.S. and Israeli intelligence agencies, was partially implemented in Lua.
+Darker note - Flame was a virus - maybe more of a cyberweapon or espionage tool - that, in 2012, infected hundreds of computers in Iran and elsewhere in the Middle East, suspected to be created by U.S. and Israeli intelligence agencies, was partially implemented in Lua.
+
+## Example: CloudFlare
+
+CloudFlare is a content delivery network.  You can put them in front of your web site, they'll offer caching, various optimizations, web application firewall, free SSL, denial-of-service protection...  Bunch of big-name customers.
+
+Run on Nginx, I would have assumed that they do a lot of heavy C work to get all of those performance-critical network features running, but they've been switching to Lua, because it's a lot easier to work in and still lets them get extremely fast.
 
 ## Games
 
@@ -37,15 +43,19 @@ Cocos 2d-x - a very popular multi-language, cross-platform framework, offers Lua
 
 Corona SDK - very popular for mobile development
 
-CryEngine - AAA 3-D game engine, now included in Amazon's free Lumberyard game engine
+CryEngine - AAA 3-D game engine
 
 Defold - sponsored by King, the company that makes Candy Crush
 
-LOVE - popular beginner/hobbyist choice
+LOVE (Love2d) - easy to pick up, popular at game jams and such
+
+Lumberyard - Amazon's new free engine, which they're pushing to promote their AWS - based on CryEngine
+
+Moai - I don't really know anything about this one, but it's also fairly popular.
 
 T-Engine 4 - an example of a more niche engine, this is designed primarily for roguelikes
 
-Lumberyard - Amazon's new free engine
+(I don't have nearly enough time to be an expert on all of these.  Some or all of what I just told you could be wrong.)
 
 # Lua: the bad parts
 
