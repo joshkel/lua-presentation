@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "reveal.js": "^3.2.0",
-    "highlightjs": "^9.2.0"
+    "highlightjs": "^9.2.0",
+    "reveal-code-focus": "^0.2.0"
   }
 }

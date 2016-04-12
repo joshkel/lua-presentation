@@ -595,7 +595,6 @@ Have fun with Lua!
         </div>
         <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
         <script src="bower_components/reveal.js/js/reveal.js"></script>
-        <script src="bower_components/highlightjs/highlight.pack.js"></script>
         <script>
             Reveal.initialize({
                 controls: false,
@@ -606,10 +605,13 @@ Have fun with Lua!
                 dependencies: [
                     { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
                     //{ src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'bower_components/reveal.js/plugin/markdown/marked.js' },
+                    { src: 'bower_components/reveal.js/plugin/markdown/markdown.js' },
                     { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+                    { src: 'bower_components/highlightjs/highlight.pack.js' },
+                    { src: 'bower_components/reveal-code-focus/reveal-code-focus.js', callback: function() { RevealCodeFocus(); } }
 				]
             });
-            hljs.initHighlightingOnLoad();
         </script>
     </body>
 </html>

@@ -50,6 +50,13 @@ img.plain {
     max-height: 600px;
 }
 
+.line {
+    display: block;
+}
+.line.focus {
+    background: yellow;
+}
+
 img#stopwatch {
     /* Dimensions of original image, scaled to match pil.jpg */
     height: 499px;
