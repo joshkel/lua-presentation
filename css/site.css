@@ -45,3 +45,15 @@ img.plain {
     color: #777;
     font-style: italic !important;
 }
+
+img#stopwatch {
+    /* Dimensions of original image, scaled to match pil.jpg */
+    height: 499px;
+    width: 665px;
+    /* Would be 130px, 306 px without scaling */
+    -webkit-clip-path: inset(0 84px 0 199px);
+    clip-path: inset(0 84px 0 199px);
+    /* Clipped image still takes up space */
+    margin-left: -199px;
+    margin-right: -84px;
+}
