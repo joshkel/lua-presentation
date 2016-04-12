@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "reveal.js": "^3.2.0"
+    "reveal.js": "^3.2.0",
+    "highlightjs": "^9.2.0"
   }
 }

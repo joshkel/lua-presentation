@@ -46,6 +46,10 @@ img.plain {
     font-style: italic !important;
 }
 
+.reveal pre code {
+    max-height: 600px;
+}
+
 img#stopwatch {
     /* Dimensions of original image, scaled to match pil.jpg */
     height: 499px;
