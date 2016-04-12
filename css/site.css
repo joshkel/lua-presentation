@@ -10,6 +10,17 @@ img.plain {
     float: left;
 }
 
+.reveal .background-caption {
+    margin-top: 500px;
+    padding: 30px;
+    background: rgba(0,0,0,0.7);
+}
+
+.reveal .background-caption.caption-top {
+    margin-top: 0;
+    margin-bottom: 300px;
+}
+
 .lua-logo {
     border-radius: 20px;
 }

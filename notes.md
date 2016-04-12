@@ -13,13 +13,15 @@ Reminds me most of a bit more verbose JavaScript - apparently both JS and Lua to
 # Why should I care?
 
 No shortage of languages available...
-Lua's unique because it's _fast_ and _easy to embed_.
+Lua's unique because it's _fast_ and _easy to embed_ (provides an easy API to work with, doesn't add a lot of weight)
 
 ## Application scripting
 
 Adobe Photoshop Lightroom; ExtraPuTTY fork of the PuTTY SSH client; HAProxy (load balancer used by GitHub, StackOverflow, bunches of other guys); Lighty and Nginx web servers; MediaWiki, the engine that powers Wikipedia; MySQL Workbench; Nmap network scanner and Wireshark network sniffer; Redis (one of the most popular key-value stores and NoSQL databases); VLC media player
 
 Could find a couple dozen more; these are just applications that I recognized or have used
+
+## Example: Viruses
 
 Darker note - Flame was a virus - maybe more of a cyberweapon or espionage tool - that, in 2012, infected hundreds of computers in Iran and elsewhere in the Middle East, suspected to be created by U.S. and Israeli intelligence agencies, was partially implemented in Lua.
 
@@ -33,7 +35,7 @@ Run on Nginx, I would have assumed that they do a lot of heavy C work to get all
 
 World of Warcraft is the best known - a good part of the UI is implemented in Lua, allowing players to create various UI add-ons and customizations
 
-A *lot* of games over the last almost 20 years...
+A *lot* of games over the last almost 20 years...  (Wikipedia lists over 150)
 
 ## Game engines
 
