@@ -690,7 +690,18 @@ end</code></pre>
 
                 <section>
                     <p>It's not all bad...</p>
-                    <pre><code class="lua">-- printf-style string formatting:
+                    <pre><code class="lua">-- Pattern matching from <a href=http://www.lua.org/pil/20.2.html">http://www.lua.org/pil/20.2.html</a>
+-- Not as powerful as regexes, but still nice.
+s = "Deadline is 30/05/1999, firm"
+date = "%d%d/%d%d/%d%d%d%d"
+print(string.sub(s, string.find(s, date)))
+-- outputs "30/05/1999"
+
+-- Search-and-replace: Replace all non-letters
+print(string.gsub("hello, up-down!", "%A", "."))
+-- outputs "hello..up.down. 4"</code></pre>
+
+                    <pre class="fragment"><code class="lua">-- printf-style string formatting
 val = 1
 print(("%3i"):format(val))
 -- outputs "  1"
@@ -701,18 +712,18 @@ print(("%3i"):format(val))
                     <h4>Incompatible implementations</h4>
                     <p>Lua 5.3 (and 5.2)</p>
                     <ul class="code-list">
-                        <li class="fragment">Integers
-                            <pre class="fragment fade-out"><code class="lua">i = 3           -- Integer
+                        <li class="fragment" data-fragment-index="1">Integers
+                            <pre class="fragment fade-out" data-fragment-index="2"><code class="lua">i = 3           -- Integer
 n = 2.0         -- Float
 print(type(i))  -- "number"
 print(type(n))  -- "number"
 print(i/n)      -- "1.5"
 print(i//n)     -- "1"</code></pre>
                         </li>
-                        <li class="fragment">Bitwise operators</li>
-                        <li class="fragment">UTF-8 support ("\u" string literals, "utf8" module)</li>
-                        <li class="fragment">"goto" statement
-                            <pre class="fragment fade-out"><code class="lua">for z=1,10 do
+                        <li class="fragment" data-fragment-index="2">Bitwise operators</li>
+                        <li class="fragment" data-fragment-index="3">UTF-8 support ("\u" string literals, "utf8" module)</li>
+                        <li class="fragment" data-fragment-index="4">"goto" statement
+                            <pre class="fragment fade-out" data-fragment-index="5"><code class="lua">for z=1,10 do
 for y=1,10 do
 for x=1,10 do
   if x^2 + y^2 == z^2 then
@@ -722,7 +733,7 @@ for x=1,10 do
   end
 end end ::zcontinue:: end</code></pre>
                         </li>
-                        <li class="fragment">Finalizers</li>
+                        <li class="fragment" data-fragment-index="5">Finalizers</li>
                     </ul>
                 </section>
 
@@ -738,6 +749,32 @@ end end ::zcontinue:: end</code></pre>
                 </section>
 
                 <section>
+                    <h3>Resources</h3>
+                    <ul>
+                        <li class="fragment">
+                            FAQs<br>
+                            <a href="http://www.luafaq.org/gotchas.html">Lua Gotchas</a>
+                        </li>
+                        <li class="fragment">
+                            Online REPL (Read-Evaluate-Print Loop)<br>
+                            <a href="https://repl.it/">repl.it</a>
+                        </li>
+                        <li class="fragment">
+                            Package manager<br>
+                            <a href="https://luarocks.org/">LuaRocks</a>
+                        </li>
+                        <li class="fragment">
+                            IDE<br>
+                            <a href="https://studio.zerobrane.com/">ZeroBrane Studio</a>
+                        </li>
+                        <li class="fragment">
+                            Alternative languages<br>
+                            <a href="http://moonscript.org/">MoonScript</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
                     <h3>Image credits</h3>
                     <ul class="credit">
                         <li><a href="https://commons.wikimedia.org/w/index.php?curid=11901243">Moon - by Gregory H. Revera, own work</a></li>
@@ -745,6 +782,10 @@ end end ::zcontinue:: end</code></pre>
                         <li><a href="https://www.flickr.com/photos/mrlerone/508091819/in/photolist-LU6ZM-CTvd9-8esu9R-6cyvEr-5FnsNq-bopgYj-cX8f9y-3w2hL-iLxovd-4V92Su-6ZpvD-ihux5T-64euRJ-6g4eby-4nSYYn-eh7TYt-f86ro1-i9NnnB-8HmCDA-wmwLoT-r55uzA-gmD3Ge-5mfH6-iyQpBa-75m8Sb-3ERSv4-bRnUkx-fJVySg-cizMFU-5Qu5AP-5rDomB-oWRqrL-wBwq6-6KZcb7-6KZcaE-9Vwuzc-8Qm8QP-csysU5-9VwtJK-nFvkp7-9sJtdA-dFYHwE-b1kU4Z-bkqPDP-gtaKNf-epZ7tB-6KV4B8-62F2mE-fEgaqw-9pQ6mz">Stopwatch - by Troy Bradbury, Flickr</a></li>
                     </ul>
                     <p class="credit">All logos and trademarks are copyright of their respective holders.</p>
+                </section>
+
+                <section>
+                    <h2>End</h2>
                 </section>
 
             </div>

@@ -133,7 +133,7 @@ Lua 5.3 (and 5.2)
 
 Bunch of other, smaller features.
 
-LuaJIT
+LuaJIT - adds a few features from 5.2, such as goto, but in general, you'll miss out on everything in previous slide. However, it adds some features of its own
 
 # Further information
 
