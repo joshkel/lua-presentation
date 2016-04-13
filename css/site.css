@@ -93,3 +93,12 @@ img#stopwatch {
     -moz-columns: 2;
     list-style-type: none;
 }
+
+.code-list li {
+    /* Force code blocks bigger. I'm not sure why this is needed. */
+    width: 800px;
+}
+
+.code-list .fragment.fade-out.visible {
+    display: none !important;
+}

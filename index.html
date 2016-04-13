@@ -624,8 +624,8 @@ Have fun with Lua!
                 </section>
 
                 <section data-background="img/JavaScript.png">
-                    <div class="background-caption fragment" style="margin-top: 510px">
-                        What are Lua's bad parts?
+                    <div class="background-caption" style="margin-top: 510px">
+                        <h3>What are Lua's bad parts?</h3>
                     </div>
                 </section>
 
@@ -633,7 +633,10 @@ Have fun with Lua!
                     <h4>1-based indexing</h4>
                     <pre><code class="lua">names = { 'Alice', 'Bob', 'Charlie' }
 print names[1]
--- prints 'Alice'</code></pre>
+-- prints 'Alice'
+
+names[0] = 'Phil'
+-- This is legal, but table.sort, #names, etc. will be confused</code></pre>
                 </section>
 
                 <section>
@@ -692,6 +695,46 @@ val = 1
 print(("%3i"):format(val))
 -- outputs "  1"
 <span class="fragment">-- Take THAT, JavaScript!</span></code></pre>
+                </section>
+
+                <section>
+                    <h4>Incompatible implementations</h4>
+                    <p>Lua 5.3 (and 5.2)</p>
+                    <ul class="code-list">
+                        <li class="fragment">Integers
+                            <pre class="fragment fade-out"><code class="lua">i = 3           -- Integer
+n = 2.0         -- Float
+print(type(i))  -- "number"
+print(type(n))  -- "number"
+print(i/n)      -- "1.5"
+print(i//n)     -- "1"</code></pre>
+                        </li>
+                        <li class="fragment">Bitwise operators</li>
+                        <li class="fragment">UTF-8 support ("\u" string literals, "utf8" module)</li>
+                        <li class="fragment">"goto" statement
+                            <pre class="fragment fade-out"><code class="lua">for z=1,10 do
+for y=1,10 do
+for x=1,10 do
+  if x^2 + y^2 == z^2 then
+    print('found a Pythagorean triple:', x, y, z)
+    print('now trying next z...')
+    goto zcontinue
+  end
+end end ::zcontinue:: end</code></pre>
+                        </li>
+                        <li class="fragment">Finalizers</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4>Incompatible Implementations</h4>
+                    <p>LuaJIT</p>
+                    <ul class="code-list">
+                        <li class="fragment">Fast</li>
+                        <li class="fragment">Really fast</li>
+                        <li class="fragment">You just won't believe how vastly, hugely, mind-bogglingly fast it is.</li>
+                        <li class="fragment">I mean, you may think that V8 is fast, but that's just peanuts to LuaJIT. <span class="fragment">(with apologies to Douglas Adams)</span></li>
+                    </ul>
                 </section>
 
                 <section>

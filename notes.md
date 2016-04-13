@@ -1,3 +1,5 @@
+Started playing around with it a couple of years ago as a side project, a nice change of pace, and could make a fun talk.
+
 # What is Lua?
 
 Quoting lua.org: "a powerful, fast, lightweight, embeddable scripting language."
@@ -15,7 +17,7 @@ Reminds me most of a bit more verbose JavaScript - apparently both JS and Lua to
 No shortage of languages available...
 Lua's unique because it's _fast_ and _easy to embed_ (provides an easy API to work with, doesn't add a lot of weight)
 
-## Application scripting
+## Embedded scripting environment for applications and servers
 
 Adobe Photoshop Lightroom; ExtraPuTTY fork of the PuTTY SSH client; HAProxy (load balancer used by GitHub, StackOverflow, bunches of other guys); Lighty and Nginx web servers; MediaWiki, the engine that powers Wikipedia; MySQL Workbench; Nmap network scanner and Wireshark network sniffer; Redis (one of the most popular key-value stores and NoSQL databases); VLC media player
 
@@ -29,7 +31,7 @@ Darker note - Flame was a virus - maybe more of a cyberweapon or espionage tool 
 
 CloudFlare is a content delivery network.  You can put them in front of your web site, they'll offer caching, various optimizations, web application firewall, free SSL, denial-of-service protection...  Bunch of big-name customers.
 
-Run on Nginx, I would have assumed that they do a lot of heavy C work to get all of those performance-critical network features running, but they've been switching to Lua, because it's a lot easier to work in and still lets them get extremely fast.
+Run on Nginx, I would have assumed that they do a lot of heavy C work to get all of those performance-critical network features running, but they've been switching to Lua, because it's a lot easier to work in and still lets them get extremely fast.  Now one of the sponsors of LuaJIT.
 
 ## Games
 
@@ -71,15 +73,24 @@ I only have X minutes, so I'm ignoring all of those.
 
 Instead, we're going to learn Lua in 15 minutes
 
+Double - 53 bits, up to 9 trillion or so
+Strings - double-brackets, Lua keeps the embedded newlines and whitespace and everything
+More verbose than JS or other curly-brace languages
+
+Metatables are _very flexible_:
+That `__newindex` method?  Set a function there that throws an error, and you have a read-only table.
+Lazy loading or memoizing?  Add a `__index` method that calculates or retrieves the value on demand.
+Want to catch undefined variables?  You can set `_G`'s metatable, and set an `__index` and `__newindex` on it - very flexible stuff.
+
 # Lua: the bad parts
 
 Every language has its bad parts, right?
 
 I feel like I can't use this photo much any more.
 
-So why talk about Lua's bad parts? It's worth being aware of them before you get into it, and, even if you never write in Lua, I find that looking at how other languages approach a problem helps broaden my horizons.
-
 A bit more subjective.
+
+So why talk about Lua's bad parts? It's worth being aware of them before you get into it, and, even if you never write in Lua, I find that looking at how other languages approach a problem helps broaden my horizons.
 
 ### 1-based indexing
 
@@ -90,7 +101,7 @@ Nowhere near smart enough to argue with Dijkstra.
 
 But...
 
-No *normal* human starts counting at 1.
+No *normal* human starts counting at 1.  And off-by-one errors are a common source of problems.
 
 Depending on who you ask, it's partially a historical accident that we programmers find it so natural.  BCPL chose 0-based, not because it made for more efficient run-time calculations of pointers and offsets, but to shave a bit of time off of compile cycles.  This was important, not just because efficiency was important in general, but because high-priority jobs could bump lower-priority jobs, and since IBM was so generous to MIT with computing hardware, if the president of IBM needed to calculate yacht race handicaps, that was an important job.
 
@@ -102,7 +113,7 @@ Missing a bunch of functionality...
 
 But...
 
-My scripting language of choice is Python. Python's motto is batteries included.  It can parse JSON, XML, email messages, has an HTTP client and server, has a SQL database engine (SQLite), a GUI toolkit.
+My scripting language of choice is Python. Python's motto is batteries included.  It's incredibly featureful - can parse JSON, XML, email messages, has an HTTP client and server, has a SQL database engine (SQLite), a GUI toolkit.
 
 Here's what my Python installation folder looks like. 57 MB of space for its standard library. For modern networks and disks, for a language that's installed systemwide, that's not bad at all.  But Lua's designed to be embeddable - add it to a utility like ExtraPuTTY, it's 20 times the entire utility.
 
@@ -112,16 +123,15 @@ Also, it's not all bad.  For example, printf-style string formatting, so it can 
 
 ### Incompatible implementations
 
-Lua 5.3
+Lua 5.3 (and 5.2)
 
 * Integers (handled transparently)
 * Bitwise operators
 * UTF-8 support (previously available in libraries)
-
-Lua 5.2
-
-* `goto` (Lua has no `continue` statement) (Yes, goto is considered harmful. Lua's philosophy is "mechanisms instead of policies" - just like providing metatables, so you can implement prototypical or classical or whatever)
+* `goto` (Lua has no `continue` statement) (Yes, goto is considered harmful. Lua's philosophy is "mechanisms instead of policies" - just like providing metatables, so you can implement prototypical or classical or whatever. So, here, instead of building all that flow control into the language, they give you the tools to do continue, nested break, Python-style for/else, etc.)
 * Finalizers
+
+Bunch of other, smaller features.
 
 LuaJIT
 
