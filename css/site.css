@@ -2,6 +2,10 @@ img.plain {
     background: transparent !important;
 }
 
+.reveal blockquote {
+    width: 80%;
+}
+
 .reveal p {
     margin-bottom: 30px;
 }
@@ -63,9 +67,11 @@ img.plain {
 
 .line {
     display: block;
+}
+.focusable .line {
     opacity: 0.3;
 }
-.line.focus {
+.focusable .line.focus {
     opacity: 1;
 }
 
@@ -79,4 +85,11 @@ img#stopwatch {
     /* Clipped image still takes up space */
     margin-left: -199px;
     margin-right: -84px;
+}
+
+.reveal ul.long-list {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style-type: none;
 }

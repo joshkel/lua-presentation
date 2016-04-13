@@ -75,10 +75,22 @@ Instead, we're going to learn Lua in 15 minutes
 
 ### 1-based indexing
 
+Pretty horrifying. Different than every popular programming language of the last twenty years. I've seen people swear off Lua forever because of this.
+
 Edsger Dijkstra essay, 1982, argued it's mathematically more elegant.
 Nowhere near smart enough to argue with Dijkstra.
+
 But...
-*No* normal humans count at 1.
+
+No *normal* human starts counting at 1.
+
+Depending on who you ask, it's partially a historical accident that we programmers find it so natural.  BCPL chose 0-based, not because it made for more efficient run-time calculations of pointers and offsets, but to shave a bit of time off of compile cycles.  This was important, not just because efficiency was important in general, but because high-priority jobs could bump lower-priority jobs, and since IBM was so generous to MIT with computing hardware, if the president of IBM needed to calculate yacht race handicaps, that was an important job.
+
+So maybe this isn't so bad.
+
+### Limited standard library
+
+Missing a bunch of functionality...
 
 ### Incompatible implementations
 
