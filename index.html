@@ -669,6 +669,7 @@ end</code></pre>
                         <li>string.endsWith</li>
                         <li>string.trim</li>
                         <li>Case conversions</li>
+                        <li>Class creation</li>
                         <li>math.round</li>
                         <li>Pretty-printing tables</li>
                         <li>table.clone</li>
@@ -676,6 +677,21 @@ end</code></pre>
                         <li>Extract a table's values&hellip;</li>
                         <li>&hellip;or keys</li>
                     </ul>
+                </section>
+
+                <section>
+                    <p>Comparison: Python</p>
+                    <img class="plain" src="img/python_dlls.png"/>
+                    <img class="plain" src="img/python_lib.png"/>
+                </section>
+
+                <section>
+                    <p>It's not all bad...</p>
+                    <pre><code class="lua">-- printf-style string formatting:
+val = 1
+print(("%3i"):format(val))
+-- outputs "  1"
+<span class="fragment">-- Take THAT, JavaScript!</span></code></pre>
                 </section>
 
                 <section>
@@ -706,7 +722,7 @@ end</code></pre>
                     { src: 'bower_components/reveal.js/plugin/markdown/markdown.js' },
                     { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
                     { src: 'bower_components/highlightjs/highlight.pack.js' },
-                    { src: 'bower_components/reveal-code-focus/reveal-code-focus.js', callback: function() { RevealCodeFocus(true); } }
+                    { src: 'js/reveal-code-focus.js', callback: function() { RevealCodeFocus(true); } }
 				]
             });
         </script>

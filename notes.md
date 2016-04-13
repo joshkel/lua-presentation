@@ -73,6 +73,14 @@ Instead, we're going to learn Lua in 15 minutes
 
 # Lua: the bad parts
 
+Every language has its bad parts, right?
+
+I feel like I can't use this photo much any more.
+
+So why talk about Lua's bad parts? It's worth being aware of them before you get into it, and, even if you never write in Lua, I find that looking at how other languages approach a problem helps broaden my horizons.
+
+A bit more subjective.
+
 ### 1-based indexing
 
 Pretty horrifying. Different than every popular programming language of the last twenty years. I've seen people swear off Lua forever because of this.
@@ -91,6 +99,16 @@ So maybe this isn't so bad.
 ### Limited standard library
 
 Missing a bunch of functionality...
+
+But...
+
+My scripting language of choice is Python. Python's motto is batteries included.  It can parse JSON, XML, email messages, has an HTTP client and server, has a SQL database engine (SQLite), a GUI toolkit.
+
+Here's what my Python installation folder looks like. 57 MB of space for its standard library. For modern networks and disks, for a language that's installed systemwide, that's not bad at all.  But Lua's designed to be embeddable - add it to a utility like ExtraPuTTY, it's 20 times the entire utility.
+
+Lua's popular, so you don't have to reinvent the wheel. Lua wiki has recipes, and there's a package manager, LuaRocks, that provides libraries.
+
+Also, it's not all bad.  For example, printf-style string formatting, so it can left-pad out of the box, unlike other languages which shall remain nameless.
 
 ### Incompatible implementations
 
