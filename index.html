@@ -160,15 +160,16 @@
                 </section>
 
                 <section>
-                    <img id="stopwatch" src="img/stopwatch.jpg" class="plain left-image fragment"/>
-                    <p>
-                        Learn Lua in 15 Minutes
-                        <a href="http://tylerneylon.com/a/learn-lua/">tylerneylon.com/a/learn-lua/</a>
-                    </p>
-                </section>
+                    <section>
+                        <img id="stopwatch" src="img/stopwatch.jpg" class="plain left-image fragment"/>
+                        <p>
+                            Learn Lua in 15 Minutes
+                            <a href="http://tylerneylon.com/a/learn-lua/">tylerneylon.com/a/learn-lua/</a>
+                        </p>
+                    </section>
 
-                <section>
-                    <pre><code class="lua">-- Two dashes start a one-line comment.
+                    <section>
+                        <pre><code class="lua focusable">-- Two dashes start a one-line comment.
 
 --[[
      Adding two ['s and ]'s makes it a
@@ -495,8 +496,8 @@ end
 ----------------------------------------------------
 
 
---[[ I'm commenting out this section so the rest of
---   this script remains runnable.
+
+
 -- Suppose the file mod.lua looks like this:
 local M = {}
 
@@ -546,7 +547,7 @@ f = loadfile('mod2.lua')  -- Call f() to run it.
 g = loadstring('print(343)')  -- Returns a function.
 g()  -- Prints out 343; nothing printed before now.
 
---]]
+
 
 ----------------------------------------------------
 -- 5. References.
@@ -583,6 +584,43 @@ http://learnxinyminutes.com/
 Have fun with Lua!
 
 --]]</code></pre>
+                        <div class="fragment current-only" data-code-focus="1-7"><!-- comments --></div>
+                        <div class="fragment current-only" data-code-focus="8-15"><!-- numbers --></div>
+                        <div class="fragment current-only" data-code-focus="17-22"><!-- strings --></div>
+                        <div class="fragment current-only" data-code-focus="24-27"><!-- while --></div>
+                        <div class="fragment current-only" data-code-focus="29-35"><!-- if/then/else --></div>
+                        <div class="fragment current-only" data-code-focus="36-44"><!-- variables --></div>
+                        <div class="fragment current-only" data-code-focus="46-48"><!-- undefined variables --></div>
+                        <div class="fragment current-only" data-code-focus="50-57"><!-- bools --></div>
+                        <div class="fragment current-only" data-code-focus="59-68"><!-- for --></div>
+                        <div class="fragment current-only" data-code-focus="70-74"><!-- repeat/until --></div>
+                        <div class="fragment current-only" data-code-focus="77-84"><!-- functions --></div>
+                        <div class="fragment current-only" data-code-focus="86-95"><!-- closures/anonymous functions --></div>
+                        <div class="fragment current-only" data-code-focus="97-111"><!-- multiple assignments and return values --></div>
+                        <div class="fragment current-only" data-code-focus="113-126"><!-- more on functions --></div>
+                        <div class="fragment current-only" data-code-focus="129-136"><!-- table --></div>
+                        <div class="fragment current-only" data-code-focus="138-146"><!-- table manipulation --></div>
+                        <div class="fragment current-only" data-code-focus="148-159"><!-- anything can be a key --></div>
+                        <div class="fragment current-only" data-code-focus="161-163"><!-- function call shortcut --></div>
+                        <div class="fragment current-only" data-code-focus="165-167"><!-- table pairs --></div>
+                        <div class="fragment current-only" data-code-focus="169-170"><!-- globals --></div>
+                        <div class="fragment current-only" data-code-focus="172-180"><!-- arrays --></div>
+                        <div class="fragment current-only" data-code-focus="182-188"><!-- metatables --></div>
+                        <div class="fragment current-only" data-code-focus="190-194"><!-- metatables --></div>
+                        <div class="fragment current-only" data-code-focus="196-202"><!-- metatables --></div>
+                        <div class="fragment current-only" data-code-focus="204-216"><!-- metatables --></div>
+                        <div class="fragment current-only" data-code-focus="218-228"><!-- metatable __index  --></div>
+                        <div class="fragment current-only" data-code-focus="230-247"><!-- metamethods  --></div>
+                        <div class="fragment current-only" data-code-focus="249-256"><!-- classes  --></div>
+                        <div class="fragment current-only" data-code-focus="258-271"><!-- classes  --></div>
+                        <div class="fragment current-only" data-code-focus="291-301"><!-- inheritance  --></div>
+                        <div class="fragment current-only" data-code-focus="315-321"><!-- inheritance  --></div>
+                        <div class="fragment current-only" data-code-focus="323-342"><!-- modules --></div>
+                        <div class="fragment current-only" data-code-focus="344-353"><!-- modules --></div>
+                        <div class="fragment current-only" data-code-focus="355-359"><!-- modules --></div>
+                        <div class="fragment current-only" data-code-focus="361-377"><!-- modules --></div>
+                        <div class="fragment current-only" data-code-focus="381-383"><!-- references --></div>
+                    </section>
                 </section>
 
                 <section>
@@ -613,7 +651,7 @@ Have fun with Lua!
                     { src: 'bower_components/reveal.js/plugin/markdown/markdown.js' },
                     { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
                     { src: 'bower_components/highlightjs/highlight.pack.js' },
-                    { src: 'bower_components/reveal-code-focus/reveal-code-focus.js', callback: function() { RevealCodeFocus(); } }
+                    { src: 'bower_components/reveal-code-focus/reveal-code-focus.js', callback: function() { RevealCodeFocus(true); } }
 				]
             });
         </script>

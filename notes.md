@@ -35,7 +35,7 @@ Run on Nginx, I would have assumed that they do a lot of heavy C work to get all
 
 World of Warcraft is the best known - a good part of the UI is implemented in Lua, allowing players to create various UI add-ons and customizations
 
-A *lot* of games over the last almost 20 years...  (Wikipedia lists over 150)
+A *lot* of games over the last almost 20 years...  (Wikipedia lists over 150; probably several times that)
 
 ## Game engines
 

@@ -63,9 +63,10 @@ img.plain {
 
 .line {
     display: block;
+    opacity: 0.3;
 }
 .line.focus {
-    background: yellow;
+    opacity: 1;
 }
 
 img#stopwatch {
